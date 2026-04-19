@@ -1,0 +1,26 @@
+{
+    "name": "ESP-IDF",
+    "build": {"dockerfile": "Dockerfile"},
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/devops-embedded-02,type=bind",
+    "workspaceFolder": "/workspaces/devops-embedded-02",
+    "postStartCommand": "git config --global --add safe.directory '*'",
+    "mounts": [
+        "source=extensionCache,target=/root/.vscode-server/extensions,type=volume"
+    ],
+    "runArgs": [
+        "--privileged"
+    ],
+    "customizations": {
+        "extensions": [
+            "espressif.esp-idf-extension"
+        ],
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "idf.espIdfPath": "/opt/esp/idf",
+                "idf.toolsPath": "/opt/esp",
+                "idf.gitPath": "/usr/bin/git"
+            }
+        }
+    }
+}
