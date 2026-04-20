@@ -4,6 +4,7 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 RUN apt-get update -y && apt-get install udev -y
+RUN curl -L https://wokwi.com/ci/install.sh | sh
 
 RUN echo "source /opt/esp/idf/export.sh > /dev/null 2>&1" >> ~/.bashrc
 RUN echo "set -o vi" >> ~/.bashrc

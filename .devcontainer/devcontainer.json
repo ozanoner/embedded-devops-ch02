@@ -10,14 +10,16 @@
         "source=extensionCache,target=/root/.vscode-server/extensions,type=volume"
     ],
     "runArgs": [
-        "--privileged"
+        "--privileged",
+        "--env-file", ".env"
     ],
     "customizations": {
         "vscode": {
             "extensions": [
                 "espressif.esp-idf-extension",
                 "github.vscode-github-actions",
-                "ms-vscode.cpptools-extension-pack"
+                "ms-vscode.cpptools-extension-pack",
+                "wokwi.wokwi-vscode"
             ],
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash",
