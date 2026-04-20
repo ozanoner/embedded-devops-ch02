@@ -1,9 +1,8 @@
-name: ESP32 Build and Flash
+name: ESP32 Build
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
 
 jobs:
   build:
